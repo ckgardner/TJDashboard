@@ -17,7 +17,10 @@
                 <template class="d-inline">
                         <v-navigation-drawer width="98px" v-model="drawer" permanent :color="sideNavColor">
                             <div class="side_nav--logo">
-                                <img src="images/bison_orange.svg" alt="bisonOrange">
+                                <img :src="bisonImg" alt="bisonOrange">
+                            </div>
+                            <div  class="side_nav--logo" @click="console.log('clicked');">
+                                <img class="mt-8 ml-3" src="images/side_nav_chart.svg" alt="chart">
                             </div>
                             <div class="side_nav--colorSwitch__div">
                                 <v-switch class="side_nav--colorSwitch" v-model="switch1" color="#FDB713"></v-switch>
