@@ -1,8 +1,22 @@
 
+@font-face{
+    font-family: "myRoboto";
+    src: url("fonts/Roboto/Roboto-Regular.ttf");
+}
+@font-face{
+    font-family: "robotoTitle";
+    src: url("fonts/Roboto_Slab/static/RobotoSlab-Regular.ttf");
+}
 body {
     margin: 0;
 }
-
+.lefty{
+    position: absolute;
+}
+#pushWrapper{
+    margin-left: 130px;
+    margin-top: 15px;
+}
 .side_nav--logo {
     margin: auto;
     width: 50%;
@@ -15,4 +29,9 @@ body {
 .side_nav--colorSwitch {
     position: fixed;
     bottom: 0;
+}
+.title{
+    font-size: 30px;
+    line-height: 40px;
+    color: #4F4F4F;
 }

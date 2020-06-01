@@ -14,7 +14,7 @@
     <div id="app">
         <v-app>
             <v-content>
-                <v-navigation-drawer width="98px" v-model="drawer" class="d-inline-block" permanent :color="sideNavColor">
+                <v-navigation-drawer width="98px" v-model="drawer" class="d-inline-block lefty" permanent :color="sideNavColor">
                     <div class="side_nav--logo">
                         <img :src="bisonImg" alt="bisonOrange">
                     </div>
@@ -25,10 +25,11 @@
                         <v-switch class="side_nav--colorSwitch" v-model="switch1" color="#FDB713"></v-switch>
                     </div>
                 </v-navigation-drawer>
-                <div class="d-inline-block">
-                    <p>Parkdata - Thunder Junction</p>
+                <div id="pushWrapper">
+                    <div class="title">
+                        <p>Parkdata - Thunder Junction</p>
+                    </div>
                 </div>
-                
             </v-content>
         </v-app>
     </div>
