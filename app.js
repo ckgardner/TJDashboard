@@ -11,7 +11,7 @@ var app = new Vue({
 
         // all data members for colored themes
         sideNavColor: '#FDFDFF', //'#282C31'
-        bisonImg: 'images/bison_orange.svg'
+        bisonImg: 'images/bison_orange.svg' //'images/bison_yellow.svg
     },
     methods: {
         
@@ -33,4 +33,4 @@ var app = new Vue({
             this.colorTheme();
         }
     }
-})
+});
