@@ -1,0 +1,18 @@
+
+body {
+    margin: 0;
+}
+
+.side_nav--logo {
+    margin: auto;
+    width: 50%;
+    margin-top: 30px;
+}
+.side_nav--colorSwitch__div{
+    margin: auto;
+    width: 50%;
+}
+.side_nav--colorSwitch {
+    position: fixed;
+    bottom: 0;
+}
