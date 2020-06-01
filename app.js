@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 console.log('connected');
 
 var app = new Vue({
@@ -10,8 +11,9 @@ var app = new Vue({
 
 
         // all data members for colored themes
+        backColor: '#EFF3F9',
         sideNavColor: '#FDFDFF', //'#282C31'
-        bisonImg: 'images/bison_orange.svg' //'images/bison_yellow.svg
+        bisonImg: 'images/bison_orange.svg', //'images/bison_yellow.svg
     },
     methods: {
         
@@ -19,12 +21,14 @@ var app = new Vue({
     computed: {
         colorTheme: function() {
             if(!this.switch1){ // light mode
-                this.sideNavColor = '#FDFDFF'
-                this.bisonImg = 'images/bison_orange.svg' 
+                this.backColor = "EFF3F9";
+                this.sideNavColor = '#FDFDFF';
+                this.bisonImg = 'images/bison_orange.svg';
             }
             if(this.switch1){ // dark mode
-                this.sideNavColor = '#282C31'
-                this.bisonImg = 'images/bison_yellow.svg'
+                this.backColor = "#212427";
+                this.sideNavColor = '#282C31';
+                this.bisonImg = 'images/bison_yellow.svg';
             }
         }
     },

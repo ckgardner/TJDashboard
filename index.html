@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
 </head>
-<body>
+<body :color="backColor">
     <div id="app">
         <v-app>
             <v-content>
@@ -28,6 +28,10 @@
                 <div id="pushWrapper">
                     <div class="title">
                         <p>Parkdata - Thunder Junction</p>
+                        <img id="titleImg" src="images/St. George Logo.svg">
+                    </div>
+                    <div class="roundContainer">
+                        <p class="contentTitle">Current Visitors</p>
                     </div>
                 </div>
             </v-content>

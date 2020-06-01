@@ -8,14 +8,14 @@
     src: url("fonts/Roboto_Slab/static/RobotoSlab-Regular.ttf");
 }
 body {
-    margin: 0;
+    margin: 0;;
 }
 .lefty{
     position: absolute;
 }
 #pushWrapper{
     margin-left: 130px;
-    margin-top: 15px;
+    margin-top: 25px;
 }
 .side_nav--logo {
     margin: auto;
@@ -30,8 +30,27 @@ body {
     position: fixed;
     bottom: 0;
 }
+.title p{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 45px;
+}
 .title{
     font-size: 30px;
-    line-height: 40px;
     color: #4F4F4F;
+}
+#titleImg{
+    float: right;
+    display: inline;
+    margin-right: 25px;
+    height: 45px;
+    width: 45px;
+}
+.roundContainer{
+    margin: 8px;
+    font-size: 20px;
+    background-color: white;
+}
+.contentTitle{
+    font-weight: bold;
 }
