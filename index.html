@@ -58,13 +58,17 @@
                             <p class="r" id="rect"></p>
                             <span class="r">total visitors in</span>
                             <span class="r" id="dateSelect">{{weeklyReportDate}}<img id="weeklyArrow" :src="weeklyArrow"></span>
-                        </div>     
+                        </div>
+                        <canvas id="lineChart" style="height:20px; width:80px;"></canvas>
                     </div>
 
                     <div class="currentContainer" v-bind:style="{backgroundColor:containerColor}">
                         <p class="contentTitle">Current Visitors</p>
 
                     </div>
+
+                    <!-- expirementing with chart.js -->
+                    <!-- <canvas id="lineChart" style="height:20px; width:80px;"></canvas> -->
                 </div>
             </v-content>
         </v-app>
@@ -74,5 +78,6 @@
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
     <script src="app.js"></script>
+    <script src="charts.js"></script>
 </body>
 </html>
