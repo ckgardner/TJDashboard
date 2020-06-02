@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
-    <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body :color="backColor">
     <div id="app">
         <v-app>
-            <v-content>
+            <v-content v-bind:style="{backgroundColor:backColor, color:textColor}">
                 <v-navigation-drawer width="98px" v-model="drawer" class="d-inline-block lefty" permanent :color="sideNavColor">
                     <div class="side_nav--logo">
                         <img :src="bisonImg" alt="bisonOrange">
@@ -30,8 +30,26 @@
                         <p>Parkdata - Thunder Junction</p>
                         <img id="titleImg" src="images/St. George Logo.svg">
                     </div>
-                    <div class="roundContainer">
+
+                    <div class="roundContainer" v-bind:style="{backgroundColor:containerColor}">
                         <p class="contentTitle">Current Visitors</p>
+                        <img class="contentImg" :src="currentVisitorsImg">
+                        <p class="bottom" style="display:block">{{currentVisitors}} people</p>
+                        <p class="right">{{currentPercentage}}%<img class="arrow" :src="currentPercentageImg"></p>
+                    </div>
+
+                    <div class="roundContainer" v-bind:style="{backgroundColor:containerColor}">
+                        <p class="contentTitle">Visitors In</p>
+                        <img class="contentImg" :src="visitorsInImg">
+                        <p class="bottom" style="display:block">{{visitorsIn}} people</p>
+                        <p class="right">{{inPercentage}}%<img class="arrow" :src="inPercentageImg"></p>
+                    </div>
+
+                    <div class="roundContainer" v-bind:style="{backgroundColor:containerColor}">
+                        <p class="contentTitle">Visitors Out</p>
+                        <img class="contentImg" :src="visitorsOutImg">
+                        <p class="bottom" style="display:block">{{visitorsOut}} people</p>
+                        <p class="right">{{outPercentage}}%<img class="arrow" :src="outPercentageImg"></p>
                     </div>
                 </div>
             </v-content>
