@@ -14,7 +14,7 @@
     <div id="app">
         <v-app>
             <v-content v-bind:style="{backgroundColor:backColor, color:textColor}">
-                <v-navigation-drawer width="98px" v-model="drawer" class="d-inline-block lefty" permanent :color="sideNavColor">
+                <v-navigation-drawer width="98px" v-model="drawer" class="d-inline-block lefty" id="drawer" permanent :color="sideNavColor">
                     <div class="side_nav--logo">
                         <img :src="bisonImg" alt="bisonOrange">
                     </div>
@@ -25,6 +25,15 @@
                         <v-switch class="side_nav--colorSwitch" v-model="switch1" color="#FDB713"></v-switch>
                     </div>
                 </v-navigation-drawer>
+
+                <div> <!-- App bar for mobile page -->
+                    <v-app-bar id="appBar" dense :color="sideNavColor" v-model="drawer">
+                        <img class="bison" src="images/bison_yellow.svg">
+                        <span id="barTitle" v-bind:style="{color:textColor}">Parkdata - Thunder Junction</span>
+                        <v-switch class="side_nav--colorSwitch" v-model="switch1" color="#FDB713"></v-switch>
+                    </v-app-bar>
+                </div>
+
                 <div id="pushWrapper">
                     <div class="title">
                         <p>Parkdata - Thunder Junction</p>

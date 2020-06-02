@@ -220,3 +220,79 @@ body {
     border: 1px solid #EE5353;
     margin-right: -8px;
 }
+@media only screen and (max-width: 960px){
+    /* App Bar */
+    #drawer{
+        display: none !important;
+    }
+    #appBar{
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+    .bison{
+        height: 45px;
+        width: 45px;
+    }
+    #barTitle{
+        position: relative;
+        margin: 0 auto;
+    }
+    .side_nav--colorSwitch{
+        position: relative;
+        right: 5px;
+        top: 11px;
+    }
+
+    /* Main Content */
+    .title{
+        display: none;
+    }
+    .roundContainer, .reportContainer, .currentContainer, .hourReportContainer{
+        display: block;
+    }
+    .roundContainer{
+        text-align: left;
+    }
+    .roundContainer{
+        height: 120px;
+        width: 320px;
+        margin: 20px 0px 20px 0px;
+    }
+    #pushWrapper{
+        text-align: center;
+        width: 320px;
+        margin-right: 60px;
+        margin: 0 auto;
+        overflow-x: scroll;
+        overflow-y: scroll;
+    }
+
+    /* Weekly Report */
+    .reportContainer, .hourReportContainer{
+        width: 620px;
+        height: 200px;
+    }
+    
+    /* Current Stat Boxes & SVG*/
+    .currentContainer{
+        width: 320px;
+        height: 220px;
+        margin: 20px 0px 20px 0px;
+    }
+    .mgn{
+        text-align: left;
+    }
+    #svg{
+        height: 150px;
+        width: 150px;
+    }
+    #text1{
+        width: 110px;
+        margin-top: 30px;
+    }
+    #text2{
+        width: 110px;
+        margin-top: 80px;
+    }
+}
