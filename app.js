@@ -32,9 +32,6 @@ var app = new Vue({
         weeklyArrow: 'images/arrow down light.svg',
     },
     methods: {
-        
-    },
-    computed: {
         colorTheme: function() {
             if(!this.switch1){ // light mode
                 this.backColor = "#EFF3F9";
@@ -59,6 +56,9 @@ var app = new Vue({
                 this.weeklyArrow = 'images/arrow down dark.svg';
             }
         }
+    },
+    computed: {
+        
     },
     watch: {
         switch1(){ // when 'switch1 is toggled; call fucntions to change colors
