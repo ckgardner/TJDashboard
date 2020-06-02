@@ -37,7 +37,7 @@ body {
     font-size: 30px;
 }
 .title{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 #titleImg{
     float: right;
@@ -48,11 +48,11 @@ body {
 .roundContainer{
     padding: 23px;
     font-size: 20px;
-    width: 26vw;
+    width: 26.5vw;
     height: 9vw;
     border-radius: 13px;
     display: inline-block;
-    margin-right: 34px;
+    margin-right: 2vw;
     position: relative;
 }
 .roundContainer p{
@@ -90,9 +90,9 @@ body {
     font-size: 20px;
     border-radius: 13px;
     display: inline-block;
-    margin-right: 34px;
+    margin-right: 2vw;
     position: relative;
-    margin-top: 34px;
+    margin-top: 2vw;
 }
 .dateContainer{
     display: inline;
@@ -124,7 +124,7 @@ body {
     vertical-align: middle;
 }
 .currentContainer{
-    width: 21vw;
+    width: 22vw;
 }
 #svgContainer{
     width: 100%;
@@ -135,6 +135,20 @@ body {
     height: 11vw;
     left: 0;
     margin-left: 20px;
+}
+@keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+}
+.background {
+    stroke-width: 4;
+    fill: none;
+}
+.overlayLine {
+    fill: none;
+    stroke-width: 4;
+    animation: dash 2s linear forwards;
 }
 .zero{
     margin-bottom: 0px !important;
@@ -162,6 +176,7 @@ body {
 .hourReportContainer{
     width: 84.5vw;
     height: 19vw;
+    margin-bottom: 2vw;
 }
 .dateSelect{
     margin-left: 50px;
