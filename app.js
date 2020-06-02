@@ -34,7 +34,7 @@ var app = new Vue({
     },
     methods: {
         loadSvg: function(){
-            this.setStop("line0", 23, CJ);
+            this.setStop("line", 22, 0.5);
         },
         setStop: function(id, radius, stop){
             var c = document.getElementById(id);
@@ -44,6 +44,12 @@ var app = new Vue({
             c.setAttribute("stroke-dashoffset", stopVal);
             c.className = "overlayLine";
         },
+    },
+    mounted: {
+        load: function(){
+            console.log("Svg ran");
+            this.loadSvg();
+        }
     },
     computed: {
         colorTheme: function() {
