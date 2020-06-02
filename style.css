@@ -22,6 +22,9 @@ body {
     width: 50%;
     margin-top: 30px;
 }
+#appBar{
+    display: none;
+}
 .side_nav--colorSwitch__div{
     margin: auto;
     width: 50%;
@@ -220,7 +223,7 @@ body {
     border: 1px solid #EE5353;
     margin-right: -8px;
 }
-@media only screen and (max-width: 960px){
+@media only screen and (max-width: 1000px){
     /* App Bar */
     #drawer{
         display: none !important;
