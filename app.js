@@ -16,6 +16,7 @@ var app = new Vue({
         visitorsOut: "288",
         outPercentage: "+1",
         weeklyReportDate: "July 8, 2020 - July 24, 2020",
+        hourlyReportDate: "July 8, 2020",
 
         // all data members for colored themes
         backColor: '#EFF3F9',
@@ -32,6 +33,19 @@ var app = new Vue({
         weeklyArrow: 'images/arrow down light.svg',
     },
     methods: {
+        loadSvg: function(){
+            this.setStop("line0", 23, CJ);
+        },
+        setStop: function(id, radius, stop){
+            var c = document.getElementById(id);
+            c.className = "background";
+            var stopVal = Math.PI * radius * 2 * (stop);
+            c.setAttribute("stroke-dasharray", stopVal + ", 3000");
+            c.setAttribute("stroke-dashoffset", stopVal);
+            c.className = "overlayLine";
+        },
+    },
+    computed: {
         colorTheme: function() {
             if(!this.switch1){ // light mode
                 this.backColor = "#EFF3F9";
@@ -56,9 +70,6 @@ var app = new Vue({
                 this.weeklyArrow = 'images/arrow down dark.svg';
             }
         }
-    },
-    computed: {
-        
     },
     watch: {
         switch1(){ // when 'switch1 is toggled; call fucntions to change colors
