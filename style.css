@@ -37,7 +37,7 @@ body {
     font-size: 30px;
 }
 .title{
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 #titleImg{
     float: right;
@@ -50,7 +50,7 @@ body {
     padding: 23px;
     font-size: 20px;
     width: 26vw;
-    height: 12vw;
+    height: 9vw;
     border-radius: 13px;
     display: inline-block;
     margin-right: 34px;
@@ -84,3 +84,48 @@ body {
 .arrow{
     margin-left: 6px;
 }
+.reportContainer, .currentContainer{
+    width: 60vw;
+    height: 19vw;
+    padding: 23px;
+    font-size: 20px;
+    border-radius: 13px;
+    display: inline-block;
+    margin-right: 34px;
+    position: relative;
+    margin-top: 34px;
+}
+.dateContainer{
+    display: inline;
+}
+#rect{
+    width: 16px;
+    height: 16px;
+    background: #F38F3D;
+    border: 1px solid #F38F3D;
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 0px;
+    vertical-align: middle;
+}
+.r{
+    position: relative;
+    right: 0;
+    vertical-align: middle;
+    margin: 10px;
+}
+#weeklyContainer{
+    display: inline; 
+    float: right; 
+    vertical-align: middle;
+    font-size: 12px;
+}
+#weeklyArrow{
+    margin: 4px;
+    vertical-align: middle;
+}
+.currentContainer{
+    width: 20.5vw;
+}
+

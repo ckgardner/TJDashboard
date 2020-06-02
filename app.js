@@ -15,6 +15,7 @@ var app = new Vue({
         inPercentage: "-1,7",
         visitorsOut: "288",
         outPercentage: "+1",
+        weeklyReportDate: "July 8, 2020 - July 24, 2020",
 
         // all data members for colored themes
         backColor: '#EFF3F9',
@@ -28,6 +29,7 @@ var app = new Vue({
         outPercentageImg: 'images/increase out.svg',
         visitorsInImg: 'images/in light mode.svg',
         visitorsOutImg: 'images/out light mode.svg',
+        weeklyArrow: 'images/arrow down light.svg',
     },
     methods: {
         
@@ -43,6 +45,7 @@ var app = new Vue({
                 this.currentVisitorsImg = 'images/current light mode.svg';
                 this.visitorsInImg = 'images/in light mode.svg';
                 this.visitorsOutImg = 'images/out light mode.svg';
+                this.weeklyArrow = 'images/arrow down light.svg';
             }
             if(this.switch1){ // dark mode
                 this.backColor = "#212427";
@@ -53,6 +56,7 @@ var app = new Vue({
                 this.currentVisitorsImg = 'images/current dark mode.svg';
                 this.visitorsInImg = 'images/in dark mode.svg';
                 this.visitorsOutImg = 'images/out dark mode.svg';
+                this.weeklyArrow = 'images/arrow down dark.svg';
             }
         }
     },
