@@ -57,13 +57,35 @@
                         <div id="weeklyContainer">
                             <p class="r" id="rect"></p>
                             <span class="r">total visitors in</span>
-                            <span class="r" id="dateSelect">{{weeklyReportDate}}<img id="weeklyArrow" :src="weeklyArrow"></span>
+                            <span class="r dateSelect">{{weeklyReportDate}}<img id="weeklyArrow" :src="weeklyArrow"></span>
                         </div>     
                     </div>
 
                     <div class="currentContainer" v-bind:style="{backgroundColor:containerColor}">
-                        <p class="contentTitle">Current Visitors</p>
+                        <p class="contentTitle zero">Current Visitors</p>
+                        <div id="svgContainer">
+                            <svg id="svg" viewBox="75 75 50 50">
+                                <circle class="background" cx="100" cy="100" r="23" stroke="#F7F6F4" />
+                                <circle id="line0" class="overlayLine" cx="100" cy="100" r="23" stroke="#B3A584" stroke-dasharray="0, 3000" stroke-dashoffset="126" transform="rotate(-90,100,100)" />
+                            </svg>
+                        </div>
+                        <div id="text1">
+                            <p id="rect1"></p>
+                            <span class="r svgText">Current Visitors</span>
+                        </div>
+                    </div>
 
+                    <div class="hourReportContainer" v-bind:style="{backgroundColor:containerColor}">
+                        <span class="contentTitle">Hourly Report</span>
+                        <div id="hourlyContainer">
+                            <p class="r" id="rect3"></p>
+                            <span class="r">Current</span>
+                            <p class="r" id="rect4"></p>
+                            <span class="r">In</span>
+                            <p class="r" id="rect5"></p>
+                            <span class="r">Out</span>
+                            <span class="r dateSelect">{{hourlyReportDate}}<img id="weeklyArrow" :src="weeklyArrow"></span>
+                        </div>     
                     </div>
                 </div>
             </v-content>

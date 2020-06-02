@@ -83,7 +83,7 @@ body {
 .arrow{
     margin-left: 6px;
 }
-.reportContainer, .currentContainer{
+.reportContainer, .currentContainer, .hourReportContainer{
     width: 60vw;
     height: 19vw;
     padding: 23px;
@@ -97,7 +97,7 @@ body {
 .dateContainer{
     display: inline;
 }
-#rect{
+#rect, #rect2, #rect3, #rect4, #rect5{
     width: 16px;
     height: 16px;
     background: #F38F3D;
@@ -124,6 +124,60 @@ body {
     vertical-align: middle;
 }
 .currentContainer{
-    width: 20.5vw;
+    width: 21vw;
 }
-
+#svgContainer{
+    width: 100%;
+}
+#svg{
+    position: absolute;
+    width: 11vw;
+    height: 11vw;
+    left: 0;
+    margin-left: 20px;
+}
+.zero{
+    margin-bottom: 0px !important;
+}
+#rect2{
+    background: #FDB713;
+    border: 1px solid #FDB713;
+}
+.svgText{
+    width: 70px;
+    font-size: 12px;
+}
+#text1{
+    position: absolute;
+    right: 23px;
+    width: 60px;
+    line-height: 12px;
+    text-align: right;
+}
+#hourlyContainer{
+    float: right; 
+    vertical-align: middle;
+    font-size: 12px;
+}
+.hourReportContainer{
+    width: 84.5vw;
+    height: 19vw;
+}
+.dateSelect{
+    margin-left: 50px;
+}
+#rect3{
+    background: #FDB713;
+    border: 1px solid #FDB713;
+    margin-right: -8px;
+}
+#rect4{
+    background: #F38F3D;
+    border: 1px solid #F38F3D;
+    margin-right: -8px;
+}
+#rect5{
+    background: #EE5353;
+    border: 1px solid #EE5353;
+    margin-right: -8px;
+}
