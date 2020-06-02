@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 console.log('charts.js connected');
 
 const WEEKLY_REPORT_CHART = document.getElementById('weeklyReportChart');
@@ -7,7 +8,6 @@ let WeeklyChart = new Chart(WEEKLY_REPORT_CHART, {
     data: {
         labels: ['Monday', 'Tuesday', 'Wedensday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
         datasets: [{
-            label: 'Total visitors in ',
             data: [650, 400, 250, 350, 500, 750, 900],
             backgroundColor: [
                 'rgb(243,143,61)',
@@ -19,6 +19,11 @@ let WeeklyChart = new Chart(WEEKLY_REPORT_CHART, {
                 'rgb(243,143,61)',
             ]
         }]
+    },
+    options: {
+        legend: {
+            display: false
+        },
     }
 });
 
@@ -86,27 +91,10 @@ let HourlyChart = new Chart(HOURLY_REPORT_CHART, {
                 ]
             }
         ]
-
-
-        // datasets: [{
-        //     label: 'Total visitors in ',
-        //     data: [[12,19, 7], 54, 143, 111, 90, 74, 189, 37, 94, 158, 10, 32, 67, 123],
-        //     backgroundColor: [
-        //         'rgb(243,143,61)',
-        //         'rgb(243,143,61)',
-        //         'rgb(243,143,61)',
-        //         'rgb(243,143,61)',
-        //         'rgb(243,143,61)',
-        //         'rgb(243,143,61)',
-        //         'rgb(243,143,61)',
-        //         'rgb(243,143,61)',
-        //         'rgb(243,143,61)',
-        //         'rgb(243,143,61)',
-        //         'rgb(243,143,61)',
-        //         'rgb(243,143,61)',
-        //         'rgb(243,143,61)',
-        //         'rgb(243,143,61)'
-        //     ]
-        // }]
+    },
+    options: {
+        legend: {
+            display: false
+        },
     }
-})
+});

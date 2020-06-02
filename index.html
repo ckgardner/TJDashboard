@@ -70,7 +70,7 @@
                         <div id="svgContainer">
                             <svg id="svg" viewBox="75 75 50 50">
                                 <circle class="background" cx="100" cy="100" r="22" stroke="#fff1d0" />
-                                <text x="88" y="102" id="currentTemp" font-size="7" font-weight="bold" style="fill: #4F4F4F">{{currentVisitors}}/500</text>
+                                <text x="88" y="102" id="currentTemp" font-size="7" font-weight="bold" :fill="textColor">{{currentVisitors}}/500</text>
                                 <circle id="line" class="overlayLine" cx="100" cy="100" r="22" stroke="#FDB713" stroke-dasharray="0, 3000" stroke-dashoffset="126" transform="rotate(-90,100,100)" />
                             </svg>
                         </div>
