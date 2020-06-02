@@ -32,9 +32,13 @@ var app = new Vue({
         visitorsOutImg: 'images/out light mode.svg',
         weeklyArrow: 'images/arrow down light.svg',
     },
+    created: function(){
+        this.loadSvg();
+    },
     methods: {
         loadSvg: function(){
-            this.setStop("line", 22, 0.5);
+            console.log("Svg loading");
+            this.setStop("line", 22, 0.58);
         },
         setStop: function(id, radius, stop){
             var c = document.getElementById(id);
@@ -43,13 +47,8 @@ var app = new Vue({
             c.setAttribute("stroke-dasharray", stopVal + ", 3000");
             c.setAttribute("stroke-dashoffset", stopVal);
             c.className = "overlayLine";
+            console.log("finished set stop");
         },
-    },
-    mounted: {
-        load: function(){
-            console.log("Svg ran");
-            this.loadSvg();
-        }
     },
     computed: {
         colorTheme: function() {
