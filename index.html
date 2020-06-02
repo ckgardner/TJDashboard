@@ -66,18 +66,28 @@
                     </div>
 
                     <div class="currentContainer" v-bind:style="{backgroundColor:containerColor}">
-                        <p class="contentTitle zero">Current Visitors</p>
+                        <p class="contentTitle mgn">Current Visitors</p>
                         <div id="svgContainer">
                             <svg id="svg" viewBox="75 75 50 50">
-                                <circle class="background" cx="100" cy="100" r="22" stroke="#F7F6F4" />
+                                <circle class="background" cx="100" cy="100" r="22" stroke="#fff1d0" />
                                 <text x="88" y="102" id="currentTemp" font-size="7" font-weight="bold" style="fill: #4F4F4F">{{currentVisitors}}/500</text>
-                                <circle id="line" class="overlayLine" cx="100" cy="100" r="22" stroke="#B3A584" stroke-dasharray="0, 3000" stroke-dashoffset="126" transform="rotate(-90,100,100)" />
+                                <circle id="line" class="overlayLine" cx="100" cy="100" r="22" stroke="#FDB713" stroke-dasharray="0, 3000" stroke-dashoffset="126" transform="rotate(-90,100,100)" />
                             </svg>
                         </div>
                         <div id="text1">
                             <p id="rect1"></p>
-                            <span class="r svgText">Current Visitors</span>
+                            <div class="svgTextWrap">
+                                <span class="r svgText">Current<br>Visitors</span>
+                            </div>
                         </div>
+
+                        <div id="text2">
+                            <p id="rect2"></p>
+                            <div class="svgTextWrap">
+                                <span class="r svgText">Space<br>Available</span>
+                            </div>
+                        </div>
+
                     </div>
 
                     <div class="hourReportContainer" v-bind:style="{backgroundColor:containerColor}">
