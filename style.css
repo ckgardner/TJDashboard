@@ -41,7 +41,6 @@ body {
 }
 #titleImg{
     float: right;
-    display: inline;
     margin-right: 25px;
     height: 45px;
     width: 45px;
@@ -116,7 +115,6 @@ body {
     margin: 10px;
 }
 #weeklyContainer{
-    display: inline; 
     float: right; 
     vertical-align: middle;
     font-size: 12px;
