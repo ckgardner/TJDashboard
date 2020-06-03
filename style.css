@@ -30,7 +30,7 @@ body {
     width: 50%;
 }
 .side_nav--colorSwitch {
-    position: fixed;
+    position: absolute;
     bottom: 0;
 }
 .title p{
@@ -49,7 +49,7 @@ body {
     width: 45px;
 }
 .roundContainer{
-    padding: 23px;
+    padding: 12px;
     font-size: 20px;
     width: 26.5vw;
     height: 10vw;
@@ -81,7 +81,7 @@ body {
     position: absolute;
     bottom: 0;
     right: 0;
-    padding-right: 23px;
+    padding-right: 12px;
 }
 .arrow{
     margin-left: 6px;
@@ -89,7 +89,7 @@ body {
 .reportContainer, .currentContainer, .hourReportContainer{
     width: 60vw;
     height: 19vw;
-    padding: 23px;
+    padding: 12px;
     font-size: 20px;
     border-radius: 13px;
     display: inline-block;
@@ -188,6 +188,18 @@ body {
     width: 84.5vw;
     height: 19vw;
     margin-bottom: 2vw;
+    margin-top: 2vw;
+}
+.dateBtn{
+    vertical-align: middle !important;
+    margin-bottom: 8px;
+    font-size: 12px !important;
+    font-family: "myRoboto";
+    height: 18px !important;
+    box-shadow: none;
+}
+.up{
+    margin-top: 0px !important;
 }
 .dateSelect{
     margin-left: 50px;

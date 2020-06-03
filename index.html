@@ -66,7 +66,19 @@
                         <div id="weeklyContainer">
                             <p class="r" id="rect"></p>
                             <span class="r">total visitors in</span>
-                            <span class="r" id="dateSelect">{{weeklyReportDate}}<img id="weeklyArrow" :src="weeklyArrow"></span>
+                            <div class="d-inline">
+                                <v-dialog ref="dialog" v-model="modal" :return-value.sync="date" persistent width="290px" >
+                                    <template v-slot:activator="{ on }">
+                                        <v-btn class="mt-2 dateBtn" v-on="on" v-bind:style="{backgroundColor:containerColor, color:textColor}">{{pickedDate}}-{{endDate}}<img id="weeklyArrow" :src="weeklyArrow"></v-btn>
+                                        <!-- <v-text-field v-model="stateDateRange" label="Picker in dialog" prepend-icon="event" readonly v-on="on" ></v-text-field> -->
+                                    </template>
+                                    <v-date-picker v-model="dateRange" range scrollable>
+                                        <v-spacer></v-spacer>
+                                        <v-btn text color="primary" @click="modal = false">Cancel</v-btn>
+                                        <v-btn text color="primary" @click="$refs.dialog.save(date); selectDates();">OK</v-btn>
+                                    </v-date-picker>
+                                </v-dialog>
+                            </div>
                         </div>
                         <div>
                             <canvas id="weeklyReportChart" style="height:20px; width:80px;"></canvas> 
@@ -108,7 +120,19 @@
                             <span class="r">In</span>
                             <p class="r" id="rect5"></p>
                             <span class="r">Out</span>
-                            <span class="r dateSelect">{{hourlyReportDate}}<img id="weeklyArrow" :src="weeklyArrow"></span>
+                            <div class="d-inline up">
+                                <v-dialog ref="dialog" v-model="modal" :return-value.sync="date" persistent width="290px" >
+                                    <template v-slot:activator="{ on }">
+                                        <v-btn class="mt-2 dateBtn" v-on="on" v-bind:style="{backgroundColor:containerColor, color:textColor}">{{pickedDate}}<img id="weeklyArrow" :src="weeklyArrow"></v-btn>
+                                        <!-- <v-text-field v-model="stateDateRange" label="Picker in dialog" prepend-icon="event" readonly v-on="on" ></v-text-field> -->
+                                    </template>
+                                    <v-date-picker text color="orange lighten-1;" v-model="dateRange" range scrollable>
+                                        <v-spacer></v-spacer>
+                                        <v-btn text color="#666" @click="modal = false">Cancel</v-btn>
+                                        <v-btn text color="#666" @click="$refs.dialog.save(date); selectDates();">OK</v-btn>
+                                    </v-date-picker>
+                                </v-dialog>
+                            </div>
                         </div>  
                         <div>
                             <canvas id="hourlyReportChart" style="height:15px; width:80px;"></canvas> 

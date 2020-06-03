@@ -8,6 +8,12 @@ var app = new Vue({
         drawer: true,
         colorMode: 'light',
         switch1: false,
+        date: new Date().toISOString().substr(0, 10),
+        modal: false,
+        dateRange: [],
+        todaysDate: "",
+        pickedDate: "",
+        endDate: "",
 
         currentVisitors: "271",
         currentPercentage: "+0,7",
@@ -34,8 +40,28 @@ var app = new Vue({
     },
     created: function(){
         this.loadSvg();
+        this.getTodaysDate();
+        this.weekDate();
     },
     methods: {
+        getTodaysDate: function () {
+            var date = new Date();
+            var months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
+
+            var fulldate = months[date.getMonth()] + " " + date.getDate() + ", " + date.getFullYear();
+            this.todaysDate = fulldate;
+            this.pickedDate = this.todaysDate;
+            return this.pickedDate;
+        },
+        weekDate: function(){
+            var date = new Date();
+            date.setDate(date.getDate()+7);
+            var months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
+            
+            var fulldate = months[date.getMonth()] + " " + date.getDate() + ", " + date.getFullYear();
+            this.endDate = fulldate;
+            return this.endDate;
+        },
         loadSvg: function(){
             console.log("Svg loading");
             this.setStop("line", 22, 0.58);
@@ -51,6 +77,9 @@ var app = new Vue({
         },
     },
     computed: {
+        dateRangeText () {
+            return this.dateRange.join(' ~ ');
+        },
         colorTheme: function() {
             if(!this.switch1){ // light mode
                 this.backColor = "#EFF3F9";
@@ -74,7 +103,7 @@ var app = new Vue({
                 this.visitorsOutImg = 'images/out dark mode.svg';
                 this.weeklyArrow = 'images/arrow down dark.svg';
             }
-        }
+        },
     },
     watch: {
         switch1(){ // when 'switch1 is toggled; call fucntions to change colors
