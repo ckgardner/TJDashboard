@@ -19,19 +19,35 @@ body {
 }
 .side_nav--logo {
     margin: auto;
-    width: 50%;
+    width: 100%;
     margin-top: 30px;
+    text-align: center;
+}
+.bison{
+    margin: 30px 0px 30px 0px;
+}
+.chart{
+    width: 30px;
+    height: 34px;
+    margin-left: -5px;
+    margin-top: 5px;
 }
 #appBar{
     display: none;
+}
+#drawer{
+    position: fixed;
 }
 .side_nav--colorSwitch__div{
     margin: auto;
     width: 50%;
 }
 .side_nav--colorSwitch {
-    position: absolute;
+    position: fixed;
     bottom: 0;
+}
+.navFocus{
+    border-left: 2px solid #FDB713;
 }
 .title p{
     display: inline-block;

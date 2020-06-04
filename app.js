@@ -25,6 +25,7 @@ var app = new Vue({
         hourlyReportDate: "July 8, 2020",
 
         // all data members for colored themes
+        chart_selected: true,
         backColor: '#EFF3F9',
         textColor: '#4F4F4F',
         containerColor: "#FDFDFF",
