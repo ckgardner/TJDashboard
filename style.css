@@ -46,8 +46,11 @@ body {
     position: fixed;
     bottom: 0;
 }
+.navImg{
+    cursor: pointer;
+}
 .navFocus{
-    border-left: 2px solid #FDB713;
+    border-left: 4px solid #FDB713;
 }
 .title p{
     display: inline-block;
