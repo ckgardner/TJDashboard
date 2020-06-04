@@ -139,6 +139,7 @@ body {
     height: 11vw;
     left: 0;
     margin-left: 20px;
+    margin-top: 0.8vw;
 }
 @keyframes dash {
     to {
@@ -309,5 +310,19 @@ body {
     #text2{
         width: 110px;
         margin-top: 80px;
+    }
+}
+@media only screen and (min-width: 1100px){
+    .roundContainer{
+        height: 8vw;
+    }
+    .currentContainer{
+        height: 18vw;
+    }
+    .hourReportContainer{
+        height: 19vw;
+    }
+    .reportContainer{
+        height: 18vw;
     }
 }
